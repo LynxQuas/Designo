@@ -21,6 +21,7 @@ const HeroSection = () => {
                     <Image
                         alt="hero image"
                         width={279}
+                        loading="eager"
                         height={573}
                         src="/hero-phone-img.png"
                         className="w-auto h-auto xl:mt-40 shrink-0"
