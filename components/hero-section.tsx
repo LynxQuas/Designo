@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { heroSectionContent } from "@/data/home-page-data";
 
 const HeroSection = () => {
     return (
@@ -6,12 +7,11 @@ const HeroSection = () => {
             <div className="flex xl:flex-row flex-col items-center justify-center">
                 <div className="flex flex-col items-center lg:items-start xl:w-135 gap-10 mx-6 md:mx-15 xl:mx-24 xl:pb-29 xl:pt-36.25 py-15">
                     <p className="text-white font-medium md:text-5xl text-[32px] leading-8 md:leading-12 text-center lg:text-start" >
-                        Award-winning custom designs and digital branding solutions
+                        {heroSectionContent.headerText}
                     </p>
 
                     <p className="text-white tracking-0 leading-6.5 text-center lg:text-start" >
-                        With over 10 years in the industry, we are experienced in creating fully responsive websites,
-                        app design, and engaging brand experiences. Find out more about our services.
+                    {heroSectionContent.headerSubText}
                     </p>
 
                     <button className="bg-white font-medium tracking-wide text-sm text-gray rounded-sm w-38 py-4.25 px-6.25">LEARN MORE</button>

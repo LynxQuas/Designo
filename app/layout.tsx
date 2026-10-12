@@ -30,9 +30,11 @@ export default function RootLayout({
                 <header className="md:my-16 lg:mx-41.25 md:mx-10 my-8.75 mx-6">
                     <Navbar />
                 </header>
+
                 <main className="lg:mx-41.25 md:mx-10 mx-0">
                     {children}
                 </main>
+
                 <Footer/>
             </body>
         </html>

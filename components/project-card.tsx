@@ -6,17 +6,29 @@ type ProjectCardProps = {
     title: string;
     url: string;
     className?: string;
+    mobileImage?: StaticImageData
 }
 
-const ProjectCard = ({ backgroundImage, title, url, className }: ProjectCardProps) => {
+const ProjectCard = ({ backgroundImage, title, url, className, mobileImage }: ProjectCardProps) => {
     return (
         <div className={`${className} group relative overflow-hidden rounded-md`}>
+            {mobileImage && (
+                <Image
+                    src={mobileImage}
+                    alt={title}
+                    width={500}
+                    height={300}
+                    className="h-full w-full object-cover md:hidden"
+                />
+            )}
+
             <Image
                 src={backgroundImage}
                 alt={title}
                 width={500}
                 height={300}
-                className="h-full w-full object-cover"
+                className={`h-full w-full object-cover ${mobileImage ? "hidden md:block" : ""
+                    }`}
             />
 
             <div className="absolute inset-0 bg-black/60 transition-colors duration-300 group-hover:bg-peach/60" />
