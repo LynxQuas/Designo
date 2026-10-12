@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const jost = Jost({
     subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
                 <main className="lg:mx-41.25 md:mx-10 mx-0">
                     {children}
                 </main>
+                <Footer/>
             </body>
         </html>
     );

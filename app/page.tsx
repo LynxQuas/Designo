@@ -9,12 +9,13 @@ import GraphicDesign from "@/public/assets/home/desktop/image-graphic-design.jpg
 import PassionateSvg from "@/public/assets/home/desktop/illustration-passionate.svg"
 import FriendlySvg from "@/public/assets/home/desktop/illustration-friendly.svg"
 import ResourcefulteSvg from "@/public/assets/home/desktop/illustration-resourceful.svg"
-import Image from "next/image";
 import ValueCard from "@/components/value-card";
+import ContactCta from "@/components/contact-cta";
+import Footer from "@/components/footer";
 
 export default function Home() {
     return (
-        <section className="pb-200">
+        <section className="">
             <HeroSection />
 
             <div className="mx-6 md:mx-0 grid pt-20 grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-x-7.5 gap-y-6">
@@ -45,7 +46,7 @@ export default function Home() {
                     Our success depends on our customers, and we strive to give them the best experience a company can provide."
                 />
             </div>
-
+            <ContactCta/>
         </section>
     );
 }
