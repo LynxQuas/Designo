@@ -18,6 +18,7 @@ const ProjectCard = ({ backgroundImage, title, url, className, mobileImage }: Pr
                     alt={title}
                     width={500}
                     height={300}
+                    loading="eager"
                     className="h-full w-full object-cover md:hidden"
                 />
             )}
@@ -27,6 +28,7 @@ const ProjectCard = ({ backgroundImage, title, url, className, mobileImage }: Pr
                 alt={title}
                 width={500}
                 height={300}
+                loading="eager"
                 className={`h-full w-full object-cover ${mobileImage ? "hidden md:block" : ""
                     }`}
             />

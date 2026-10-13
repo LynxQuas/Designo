@@ -3,12 +3,8 @@ import Image from "next/image";
 import DesignoLogoText from "@/public/assets/shared/desktop/logo-light.png";
 import NavList from "./nav-list";
 import { navItems } from "@/data/nav-items";
-
-import FacebookIcon from "@/public/assets/shared/desktop/icon-facebook.svg";
-import InstagramIcon from "@/public/assets/shared/desktop/icon-instagram.svg";
-import PinterestIcon from "@/public/assets/shared/desktop/icon-pinterest.svg";
-import TwitterIcon from "@/public/assets/shared/desktop/icon-twitter.svg";
-import YoutubeIcon from "@/public/assets/shared/desktop/icon-youtube.svg";
+import Link from "next/link";
+import { extranalLinks } from "@/data/footer";
 
 const Footer = () => {
     return (
@@ -16,11 +12,10 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-between gap-y-16.25 md:flex-row">
                 <Image
                     src={DesignoLogoText}
-                    loading="lazy"
-                    width={157}
-                    height={27}
                     alt="Designo logo"
-                    className="w-auto h-auto"
+                    width={157}
+                    height={25}
+                    className="aspect-157/25"
                 />
 
                 <NavList
@@ -48,11 +43,11 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <Image src={FacebookIcon} className="w-auto h-auto"  width={24} height={24} alt="Facebook" />
-                    <Image src={YoutubeIcon} width={24} className="w-auto h-auto" height={24} alt="YouTube" />
-                    <Image src={TwitterIcon} width={24} height={20} alt="Twitter" className="w-auto h-auto" />
-                    <Image src={PinterestIcon} width={24} height={24} alt="Pinterest" className="w-auto h-auto"/>
-                    <Image src={InstagramIcon} width={24} height={24}  alt="Instagram" className="w-auto h-auto"/>
+                {extranalLinks.map((link) => (
+                    <Link key={link.href} target="_blank" rel="noopener noreferrer" href={link.href}>
+                        <Image className="aspect-24/24"  src={link.svg} alt={link.alt}/>
+                    </Link>
+                ))}
                 </div>
             </div>
         </footer>

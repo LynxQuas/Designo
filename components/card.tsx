@@ -10,7 +10,7 @@ type CardProps = {
 
 const Card = ({ cardData }: CardProps) => {
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-y-8 lg:gap-x-8 mt-40 mx-6">
+        <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-y-8 lg:gap-x-8 mt-40 mx-6 md:mx-0">
             {cardData.map((card) => (
                 <div className="rounded-sm overflow-clip flex lg:flex-col md:flex-row flex-col" key={card.projectTitle}>
                     <div className="w-full md:w-1/2 lg:w-full aspect-350/320 relative shrink-0">
@@ -18,6 +18,7 @@ const Card = ({ cardData }: CardProps) => {
                             className="object-cover"
                             src={card.image}
                             alt={card.projectTitle}
+                            loading="lazy"
                             fill
                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                         />
