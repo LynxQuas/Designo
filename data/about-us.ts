@@ -70,19 +70,19 @@ export const aboutContent = {
 export const locations = [
     {
         svg: Canada,
-        href: "",
+        href: "/locations",
         label: "canada"
     },
 
     {
         svg: Australia,
-        href: "",
+        href: "/locations",
         label: "Australia",
     },
 
     {
         svg: UnitedKingdom,
-        href: "",
+        href: "/locations",
         label: "United Kingdom"
         
     }

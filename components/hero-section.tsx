@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { heroSectionContent } from "@/data/home-page-data";
+import Link from "next/link";
 
 const HeroSection = () => {
     return (
@@ -14,7 +15,7 @@ const HeroSection = () => {
                     {heroSectionContent.headerSubText}
                     </p>
 
-                    <button className="bg-white font-medium tracking-wide text-sm text-gray rounded-sm w-38 py-4.25 px-6.25">LEARN MORE</button>
+                    <Link href="/about" className="text-center bg-white font-medium tracking-wide text-sm text-gray rounded-sm w-38 py-4.25 px-6.25">LEARN MORE</Link>
                 </div>
 
                 <div className="h-100 xl:h-auto overflow-hidden flex justify-center items-start">

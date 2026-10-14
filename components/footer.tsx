@@ -10,13 +10,15 @@ const Footer = () => {
     return (
         <footer className="bg-black -mt-25 py-36 lg:px-41.25 md:px-10 px-6">
             <div className="flex flex-col items-center justify-between gap-y-16.25 md:flex-row">
-                <Image
-                    src={DesignoLogoText}
-                    alt="Designo logo"
-                    width={157}
-                    height={25}
-                    className="aspect-157/25"
-                />
+                <Link href="/">
+                    <Image
+                        src={DesignoLogoText}
+                        alt="Designo logo"
+                        width={157}
+                        height={25}
+                        className="aspect-157/25"
+                    />
+                </Link>
 
                 <NavList
                     navItems={navItems}
@@ -43,11 +45,11 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                {extranalLinks.map((link) => (
-                    <Link key={link.href} target="_blank" rel="noopener noreferrer" href={link.href}>
-                        <Image className="aspect-24/24"  src={link.svg} alt={link.alt}/>
-                    </Link>
-                ))}
+                    {extranalLinks.map((link) => (
+                        <Link key={link.href} target="_blank" rel="noopener noreferrer" href={link.href}>
+                            <Image className="aspect-24/24" src={link.svg} alt={link.alt} />
+                        </Link>
+                    ))}
                 </div>
             </div>
         </footer>

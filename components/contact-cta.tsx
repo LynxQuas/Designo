@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const ContactCta = () => {
     return (
         <div className="bg-peach isolate z-10 lg:px-23.75 lg:py-18 mt-32.75 rounded-md p-14.5 mx-6 md:mx-0">
@@ -10,7 +12,7 @@ const ContactCta = () => {
                         how our expertise can help your business grow.</p>
                 </div>
 
-                <button className="bg-white text-black p-4.5 rounded-sm cursor-pointer hover:cursor-pointer uppercase hover:bg-peach-light hover:text-white">get in touch</button>
+                <Link href="/contact" className="text-center bg-white text-black p-4.5 rounded-sm cursor-pointer hover:cursor-pointer uppercase hover:bg-peach-light hover:text-white">get in touch</Link>
             </div>
         </div>
     )
